@@ -1,3 +1,28 @@
+/*
+A ~ Z
+0. 요구사항분석
+1. 변수추출
+2. 이미지 저장
+3. HTML
+4. CSS
+5. JS
+  - 데이터바인딩
+  - Interaction
+6. 호환성체크
+7. 접근성체크
+8. 개발팀
+*/
+
+/* 변수정의 */
+:root {
+  /* 전역변수 */
+  /* font-family color */
+  /* 변수명 디자인 시스템... */
+  --fontBlack: #000;
+  --borderBlack: #000;
+  --bgBlack: #000;
+}
+
 /* CSS Nesting */
 /* 고정값 px, rem */
 html {
@@ -11,10 +36,36 @@ body {
 * {
   font-family: "Noto Sans KR", sans-serif;
 }
+
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+/* header */
+.header {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  gap: 5rem;
+  height: 9rem;
+  margin-inline: 7rem;
+  border-bottom: 1px solid var(--borderBlack);
+  @media (width < 1024px) {
+    grid-template-columns: min-content 1fr;
+    height: 5rem;
+    margin-inline: 0.8rem;
+  }
+}
+.utillity {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  @media (width < 1024px) {
+    justify-self: end;
+    gap: 1rem;
+  }
 }
 
 /* 메뉴 */
@@ -28,9 +79,12 @@ button {
     font-size: 1.1rem;
     line-height: 1.6rem;
     letter-spacing: 0.11rem;
-    color: #000;
+    color: var(--fontBlack);
     text-decoration: none;
     text-transform: uppercase;
+  }
+  @media (width < 1024px) {
+    display: none;
   }
 }
 
@@ -42,13 +96,22 @@ button {
   font-size: 1.1rem;
   line-height: 1.498rem;
   letter-spacing: 0.11rem;
-  color: #000;
+  color: var(--fontBlack);
   text-transform: uppercase;
   &::after {
     content: "";
     width: 1.2rem;
     height: 1.177rem;
     background: url(../images/ico_search.svg) no-repeat;
+  }
+  @media (width < 1024px) {
+    span {
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
   }
 }
 .btn-cart {
@@ -59,7 +122,7 @@ button {
   font-size: 1.1rem;
   line-height: 1.498rem;
   letter-spacing: 0.11rem;
-  color: #000;
+  color: var(--fontBlack);
   text-transform: uppercase;
   span {
     display: inline-flex;
@@ -72,6 +135,9 @@ button {
       background: url(../images/ico_cart.svg) no-repeat;
     }
   }
+  @media (width < 1024px) {
+    display: none;
+  }
 }
 
 .a11y-hidden {
@@ -80,4 +146,30 @@ button {
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.btn-wishlist {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--fontBlack);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+  letter-spacing: 0.11rem;
+  &::before {
+    content: "";
+    width: 1.3rem;
+    height: 1.6rem;
+    background: url(../images/ico_wishlist.svg) no-repeat;
+  }
+  @media (width < 1024px) {
+    display: none;
+  }
+}
+
+.btn-mypage {
+  width: 1.5rem;
+  height: 1.6rem;
+  background: url(../images/ico_mypage.svg) no-repeat;
 }
