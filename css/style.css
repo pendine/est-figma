@@ -1,0 +1,83 @@
+/* CSS Nesting */
+/* 고정값 px, rem */
+html {
+  font-size: 62.5%;
+  /* 100% = 16px */
+}
+body {
+  font-size: 1rem;
+}
+/* Normalize */
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* 메뉴 */
+.gnb {
+  ul {
+    display: flex;
+    gap: 4.8rem;
+  }
+  a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.11rem;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.btn-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.722rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.498rem;
+  letter-spacing: 0.11rem;
+  color: #000;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    width: 1.2rem;
+    height: 1.177rem;
+    background: url(../images/ico_search.svg) no-repeat;
+  }
+}
+.btn-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.016rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.498rem;
+  letter-spacing: 0.11rem;
+  color: #000;
+  text-transform: uppercase;
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    &::before {
+      content: "";
+      width: 1.4rem;
+      height: 1.6rem;
+      background: url(../images/ico_cart.svg) no-repeat;
+    }
+  }
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
