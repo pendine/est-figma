@@ -1,4 +1,5 @@
 {
   "figma.assetExportDirectory": "/images",
-  "figma.autocompleteBlocks": true
+  "figma.autocompleteBlocks": true,
+  "figma.autocompleteProperties": true
 }
