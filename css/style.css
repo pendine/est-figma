@@ -1,12 +1,6 @@
 /* -------------------------------------------------------------------------- */
 /*                                  3일차 해야할것                              */
 /* -------------------------------------------------------------------------- */
-/* 
- 1. nvda듣기
- 2. 반응형 기준 정의
- 3. QR코드 넣기
- 4. 호환성 테스트
-*/
 
 /*
 A ~ Z
@@ -189,6 +183,9 @@ button {
 }
 
 .btn-prev {
+  position: absolute;
+  left: 7.06rem;
+  top: 50%;
   width: 1.5063rem;
   height: 2.875rem;
   background: url(../images/ico_prev.svg) no-repeat;
@@ -218,17 +215,21 @@ button {
     object-fit: cover;
   }
 }
+
 .slide__title {
   color: var(--fontBlack);
   font-size: 5rem;
   font-weight: 400;
   line-height: 6.1rem;
+  margin-bottom: 0.6rem;
 }
+
 .slide__description {
   color: var(--fontBlack);
   font-family: var(--eng);
   font-size: 1.8rem;
   line-height: 2.2rem;
+  margin-bottom: 3.8rem;
 }
 
 .slide__information {

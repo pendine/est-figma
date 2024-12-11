@@ -1,5 +1,6 @@
 {
   "figma.assetExportDirectory": "/images",
   "figma.autocompleteBlocks": true,
-  "figma.autocompleteProperties": true
+  "figma.autocompleteProperties": true,
+  "liveServer.settings.port": 5501
 }
